@@ -1,0 +1,112 @@
+/*definisco la struttura del body*/
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-Serif;
+}
+/*Definisco la struttura del div contentirore*/
+.Card_Board {
+    position: relative;
+    width: 219px;
+    height: 419px;
+    border-radius: 20px;
+    overflow: hidden; 
+    color: white;
+    user-select: none;
+}
+/*Impostazioni dell'immagine*/
+.Image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+/*Impostazioni del div contenitore delle impostazioni*/
+.Settings {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 0;
+}
+/*creo lo pseudo elemento trasparante sopra l'immagine*/
+.Card_Board::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 2;
+}
+
+#Save {
+    font-size: 17px;
+    font-weight: 800;
+    color: white;
+    background-color: rgba(182, 29, 29, 0.493);
+    width: 55px;
+    height: 55px;
+    border-radius: 100px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: top 0.2s linear 0.1s;
+}
+
+.button {
+    font-size: 15px;
+    font-weight: 800;
+    color: black;
+    background-color: rgba(27, 182, 182, 0.493);
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 10px;
+    transition: bottom 0.2s linear 0.1s;
+}
+/*Imposto le posizioni dei bottoni con link e tasto condividi*/
+#link {
+    width: 120px;
+    height: 35px;
+    left: 48px;
+}
+
+#Share {
+    width: 35px;
+    height: 35px;
+    right: 180px;
+}
+
+#Options {
+    width: 35px;
+    height: 35px;
+    right:10px;
+}
+/*Imposto l'animazione per l'effetto opacp*/
+.Card_Board:hover::before {
+    opacity: 0.4;
+}
+/*faccio in modo che le settings siano sovrapposte davanti all'immagione dopo l'effetto hover*/
+.Card_Board:hover .Settings {
+    z-index: 2;
+}
+
+/*Queste azioni permettono lo spostamento dei tasti verso il centro*/
+.Card_Board:hover .Settings .button {
+    bottom: 25px;
+}
+
+.Card_Board:hover .Settings #Save {
+    top: 25px;
+}
+

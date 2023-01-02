@@ -1,0 +1,270 @@
+body {
+    text-align: center;
+    margin: 0;
+    color: #333;    
+    background-color: #eaeded;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #222f3e;
+    width: 100%;
+    text-align: left;  
+    position: fixed;
+    z-index: 2;
+}
+
+#logo {
+    padding-top: 0,1%;
+    height: 40px;
+    padding-left: 1%;
+}
+
+#Menu {
+    display: flex;
+    color: aliceblue;
+    background-color: #364759;
+    height: 8.5%;
+    padding-left: 1%;
+    padding-top: 0.1%;
+}
+
+.Prg {
+    padding-left: 0.3%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+  }
+
+main {
+    padding-top: 1%;
+    padding-left: 4.2%;
+    padding-right: 4.2%;
+    height: 100%;
+}
+
+#Orange-bar {
+    width: 100%;
+    padding:0%;
+    height: 4%;
+    background-color: #f56600;
+    color: aliceblue;
+    text-align: center;
+}
+
+#Shop-orange {
+    margin: 1%;
+    padding:0.4%;
+}
+
+#Background-Image {
+    background-image: url('./assets/bg-image.png');
+    width: 100%;
+    height: 21%;
+    padding-top: 2%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+h1 {
+    margin:0%;
+    padding:3%;
+    color: #eaeded;
+}
+
+h3 {
+    margin: 0%;
+    padding-bottom: 4%;
+    color: #eaeded;
+}
+
+#Container {
+    width: 100%;
+    margin-top: 2.5%;
+    background-color:white;
+}
+
+#Sub-title {
+    display: flex;
+    padding-left: 1%;
+    padding-top: 1%;
+    font-size: large;
+    font-weight: 600;
+}
+
+.link {
+    padding-left: 1%;
+    text-decoration: none;
+    color: #007185;
+}
+
+.C-Image {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2%;   
+}
+.Board_Image {
+    position: relative;
+    width: 319px;
+    height: 319px;
+    border-radius: 20px;
+    overflow: hidden; 
+    color: white;
+    user-select: none;
+}
+.Image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+.Settings {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 0;
+}
+
+.Board_Image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 2;
+}
+.Board_Image:hover::before{
+    opacity: 0.4;
+}
+.Board_Image:hover .Settings {
+    z-index: 2;
+}
+.heart {
+    position: absolute;
+    top:10px;
+    right: 30px;
+    
+}
+.cart {
+    position: absolute;
+    bottom:10px;
+    left: 50px;
+    width: 70%;
+    height: 10%;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(27, 182, 182);
+    font-size: 15px;
+    font-weight: 800;
+    transition: bottom 0.2s linear 0.1s;
+}
+#Container_2 {
+    width: 100%;
+    background-color: #eaeded;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;   
+}
+
+.Category {
+    display: inline-block;
+    flex-direction: row wrap;
+    background-color: white;
+    width: 350px;
+    height: 440px;
+    
+}
+
+.Label {
+    display: block;
+    text-align: left;
+    padding-left: 5.5%;
+    font-weight: 600;
+    font-size: large;
+}
+
+.Img_Category {
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-around; 
+    max-height: 70%;
+}
+
+.Object {
+    width: 38%;
+    padding: 1%;
+    text-align: left;
+}
+
+.Label2 {
+    font-size: small;
+    font-weight: 600;
+    margin-top: 0%;
+}
+
+.Card {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.Container_Category {
+    text-align: left;
+    padding-left: 6%; 
+    padding-top: 8.5%;
+    height: 15%;
+}
+
+.Label3 {
+    font-size: small;
+    font-weight: 600;
+    color: rgb(77, 173, 252);
+}
+
+.S-Image {
+    padding-top: 0.5%;
+    font-weight: 600;
+}
+
+.Footer_Container {
+    font-size: large;
+}
+
+#footer-1 {
+    background-color: #364759;
+    color: aliceblue;
+}
+
+.Back-to-top {
+    margin: 0%;
+    font-weight: 600;
+}
+
+#link2 {
+    color: aliceblue;
+}
+
+#footer-2 {
+    width: auto;
+    height: 10%;
+    background-color: #222f3e; 
+}
+
+
+
+
+
